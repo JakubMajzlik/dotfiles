@@ -51,16 +51,39 @@ padding-left = 2
 padding-right = 2
 module-margin = 1.5
 
-modules-left = volume backlight battery 
+modules-left = volume backlight battery keyboard 
 modules-center = i3
-modules-right = eth wlan date time
+modules-right = eth wlan date time logout poweroff
 
 tray-position = none
 tray-detached = true
 
+line-size = 2
+lineheight = 2
+
 ;---------;
 ; MODULES ;
 ;---------;
+
+[module/logout]
+type = custom/script
+
+exec = echo ""
+
+click-left = exec i3-msg exit
+
+[module/poweroff]
+type = custom/script
+
+exec = echo ""
+
+click-left = exec shutdown now
+
+[module/keyboard]
+type = internal/xkeyboard
+
+label-layout =  %name%
+
 
 [module/i3]
 type = internal/i3
@@ -72,7 +95,8 @@ enable-scroll = false
 label-unfocused-foreground = #afafaf
 label-focused-foreground = #fff
 label-urgent-foreground = #ff0000
-
+label-focused-underline = #fff
+label-visible-underline = #555555
 
 [module/time]
 type = internal/date
