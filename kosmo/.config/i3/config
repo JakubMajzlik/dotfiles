@@ -1,6 +1,8 @@
 # Setting SUPER Key
 set $mod Mod4
 
+for_window [class="^.*"] border pixel 0
+
 # Font 
 font pango:Hack 14
 
@@ -145,9 +147,6 @@ bindsys XF86MonBrightnessDown exec xbacklight -10
 exec_always setxkbmap -layout us,sk
 exec_always setxkbmap -option 'grp:alt_shift_toggle'
 
-# "diable" titlebar
- new_window 1pixel
-
 # gaps
 gaps outer -2
 gaps inner 20
@@ -162,6 +161,8 @@ exec_always ~/.scripts/bar.sh
 exec_always ~/.scripts/autoname_workspace.py --norenumber_workspaces &
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec_always autotiling
+exec_always numlockx on
+
 
 # Theme colors
 # class                   border  backgr. text    indic.   child_border
