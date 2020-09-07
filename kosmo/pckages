@@ -4,9 +4,10 @@ gently
 # pip
 fontawesome
 
-# pacman
+# packages
 kvantum?? 
 picom
 rofi
 polybar
 nitrogen
+oh-my-bash
