@@ -7,7 +7,7 @@ configuration {
 /*	bw: 1;*/
 	location: 1;
 /*	padding: 5;*/
-	yoffset: 10;
+	yoffset: 5;
 /*	xoffset: 0;*/
 /*	fixed-num-lines: true;*/
 	show-icons: false;
@@ -19,10 +19,10 @@ configuration {
 /*	run-shell-command: "{terminal} -e {cmd}";*/
 /*	window-command: "wmctrl -i -R {window}";*/
 /*	window-match-fields: "all";*/
-/*	icon-theme: ;*/
+/*	icon-theme: "Papirus-Dark";*/
 /*	drun-match-fields: "name,generic,exec,categories";*/
 /*	drun-show-actions: false;*/
-/*	drun-display-format: "{name} [<span weight='light' size='small'><i>({generic})</i></span>]";*/
+/*	drun-display-format: "aaa {name} [<span weight='light' size='small'><i>({generic})</i></span>]";*/
 /*	disable-history: false;*/
 /*	ignored-prefixes: "";*/
 /*	sort: false;*/
@@ -65,9 +65,9 @@ configuration {
 /*	pid: "/run/user/1000/rofi.pid";*/
 /*	display-window: ;*/
 /*	display-windowcd: ;*/
-/*	display-run: ;*/
+	display-run: "Run: " ;
 /*	display-ssh: ;*/
-/*	display-drun: ;*/
+/*	display-drun: aaa ; */
 /*	display-combi: ;*/
 /*	display-keys: ;*/
 /*	kb-primary-paste: "Control+V,Shift+Insert";*/
@@ -151,10 +151,16 @@ configuration {
     font:            "Times New Roman 12";
 }
 
+prompt {
+	background-color: #0a4585;
+
+	padding : 1px 8px 1px 8px;
+}
+
 window {
     anchor:     north;
     location:   north;
-    width:      60%;
+    width:      50%;
     padding:    4px;
     children:   [ horibox ];
 }
