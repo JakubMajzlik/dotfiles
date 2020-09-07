@@ -53,7 +53,7 @@ module-margin = 1.5
 
 modules-left = volume backlight battery keyboard 
 modules-center = i3
-modules-right = eth wlan date time logout poweroff
+modules-right = eth wlan date time  powermenu
 
 tray-position = none
 tray-detached = true
@@ -64,6 +64,40 @@ lineheight = 2
 ;---------;
 ; MODULES ;
 ;---------;
+
+[module/powermenu]
+type = custom/menu
+
+format-spacing = 1
+
+label-open = 
+label-open-foreground = #fff
+label-close = 
+label-close-foreground = #fff
+label-separator = |
+label-separator-foreground = #fff
+
+menu-0-0 = 
+menu-0-0-exec = menu-open-1
+menu-0-1 = 
+menu-0-1-exec = menu-open-2
+menu-0-2 = 
+menu-0-2-exec = menu-open-3
+
+;menu-1-1 =  b
+;menu-1-1-exec = menu-open-0
+menu-1-0 = 
+menu-1-0-exec = reboot
+
+menu-2-0 = 
+menu-2-0-exec = shutdown -h now
+;menu-2-1 =  b
+;menu-2-1-exec = menu-open-0
+
+menu-3-0 =  
+menu-3-0-exec = i3-msg exit
+;menu-3-1 =  b
+;menu-3-1-exec = menu-open-0
 
 [module/logout]
 type = custom/script
