@@ -78,11 +78,11 @@ label-separator = |
 label-separator-foreground = #fff
 
 menu-0-0 = 
-menu-0-0-exec = menu-open-1
+menu-0-0-exec = reboot
 menu-0-1 = 
-menu-0-1-exec = menu-open-2
+menu-0-1-exec = shutdown -h now
 menu-0-2 = 
-menu-0-2-exec = menu-open-3
+menu-0-2-exec = i3-msg exit
 
 ;menu-1-1 =  b
 ;menu-1-1-exec = menu-open-0
@@ -131,6 +131,7 @@ label-focused-foreground = #fff
 label-urgent-foreground = #ff0000
 label-focused-underline = #fff
 label-visible-underline = #555555
+label-separator = "  "
 
 [module/time]
 type = internal/date

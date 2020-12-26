@@ -2,7 +2,7 @@ configuration {
 	modi: "run,drun";
 	width: 100;
 	lines: 1;
-	columns: 1;
+	columns: 3;
 /*	font: "mono 12";*/
 /*	bw: 1;*/
 	location: 1;
@@ -149,46 +149,38 @@ configuration {
     /*border-color:          White;*/
     text-color:           White;
     font:            "Times New Roman 12";
-}
+    margin: 0px 0px;
+    padding: 0px 0px;
 
-prompt {
-	background-color: #0a4585;
-	content: "Run: ";
-	padding : 1px 8px 1px 8px;
 }
 
 window {
     anchor:     center;
     location:   center;
-    width:      50%;
-    padding:    4px;
-   /* children:   [ horibox ];*/
+    width:      15%;
+    padding:    0px;
+	spacing:0px;
 }
 
-horibox {
-   /* orientation: horizontal;*/
-    children:   [ /*prompt,*/ entry, listview ];
+element selected {
+    background-color: #0a4585;
 }
 
 listview {
-   /* layout:     horizontal;*/
-    spacing:    5px;
-    lines:      5;
+    layout:     horizontal;
+    spacing: 10px;
+    
+}
+
+prompt {
+	background-color: #0a4585;
+	padding : 0px 0px 0px 0px;
+	margin: 0px;
+	spacing:0px;
+	
 }
 
 inputbar {
-    children:   [ prompt,entry];
+    children:   [ prompt];
 
-}
-
-entry {
-    expand:     false;
-    width:      10em;
-}
-
-element {
-    padding: 0px 2px;
-}
-element selected {
-    background-color: #0a4585;
 }

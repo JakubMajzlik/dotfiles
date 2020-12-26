@@ -1,0 +1,14 @@
+#!/bin/bash
+
+title="Configs:"
+widthpercent=10
+config="~/.config/rofigen/cfgs/configs.rasi"
+
+
+typeset -A menu
+menu=(
+    [i3 ]="konsole -e vim .config/i3/config"
+    [polybar]="konsole -e vim .config/polybar/config"
+    [Picom]="konsole -e vim .config/picom/compton.conf"
+    [Rofi]="konsole -e vim .config/rofi/config.rasi"
+)
