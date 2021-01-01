@@ -28,9 +28,13 @@ bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
 # bindsym $mod+d exec dmenu_run
-bindsym $mod+d exec rofi -show drun
+bindsym $mod+d exec rofi -show drun -display-drun "Run: "
 bindsym $mod+p exec rofigen ~/.config/rofigen/powermenu
 bindsym $mod+c exec rofigen ~/.config/rofigen/configs
+bindsym $mod+g exec rofigen ~/.config/rofigen/optimus-manager-switch
+
+# Fix monitors and polybars after graphic switch
+bindsym $mod+Shift+g exec xrandr --output DP-1-1 --auto --right-of eDP-1-1 && ./.scripts/bar.sh
 
 # change focus
 bindsym $mod+j focus left
@@ -142,20 +146,26 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-bindsys XF86MonBrightnessUp exec xbacklight +10
-bindsys XF86MonBrightnessDown exec xbacklight -10
+bindsym XF86MonBrightnessUp exec blight set +20
+bindsym XF86MonBrightnessDown exec blight set -20
 
-bindsys XF86TouchpadToggle exec sh ~/.scripts/touchpadtoggle.sh
+bindsym XF86TouchpadToggle exec sh ~/.scripts/touchpadtoggle.sh
+
+bindsym $mod+n exec kill -s USR1 $(pidof deadd-notification-center)
 
 # Keyboard layout
-exec_always --no-startup-id setxkbmap -layout us,sk
-exec_always --no-startup-id setxkbmap -option 'grp:alt_shift_toggle'
+exec --no-startup-id setxkbmap -layout us,sk
+exec --no-startup-id setxkbmap -option 'grp:alt_shift_toggle'
+
+# Cursor speed
+exec xset r rate 220 50
+
 
 # gaps
 gaps outer -2
 gaps inner 10
-gaps top 10
-smart_borders on
+gaps top 5
+ smart_borders on
 
 # Startup
 exec_always --no-startup-id nitrogen --restore
@@ -168,7 +178,8 @@ exec_always --no-startup-id autotiling
 exec_always --no-startup-id numlockx on
 exec --no-startup-id redshift
 # exec --no-startup-id albert
-# exec --no-startup-id geary --gapplication-service 
+exec --no-startup-id geary --gapplication-service 
+exec --no-startup-id deadd-notification-center
  
 # Theme colors
 # class                   border  backgr. text    indic.   child_border

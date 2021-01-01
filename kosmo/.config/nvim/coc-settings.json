@@ -1,0 +1,37 @@
+{
+	"coc.preferences.formatOnSaveFiletypes": [
+		"css",
+		"markdown",
+		"javascript",
+		"graphql",
+		"html",
+		"yaml",
+		"json",
+		"python",
+		"java"
+	],
+	"codeLens.enable": true,
+	"java.referencesCodeLens.enabled": true,
+	// python config
+	"python.linting.enabled": true,
+	"python.linting.pylintEnabled": true,
+	"snippets.ultisnips.directories": [
+		"UltiSnips",
+		"~/.config/nvim/utils/snips"
+	],
+	"java.configuration.runtimes": [
+		{
+			"name": "JavaSE-1.8",
+			"path": "/usr/lib/jvm/java-8-openjdk"
+		},
+		{
+			"name": "JavaSE-11",
+			"path": "/usr/lib/jvm/java-11-openjdk",
+			"default": true
+		},
+		{
+			"name": "JavaSE-14",
+			"path": "/usr/lib/jvm/java-14-openjdk"
+		}
+	]
+}
