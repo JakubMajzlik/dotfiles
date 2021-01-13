@@ -9,15 +9,15 @@ function run {
 
 # Find out your monitor name with xrandr or arandr (save and you get this line)
 #xrandr --output VGA-1 --primary --mode 1360x768 --pos 0x0 --rotate normal
-#xrandr --output DP2 --primary --mode 1920x1080 --rate 60.00 --output LVDS1 --off &
+xrandr --output DP-1-1 --auto --right-of eDP-1-1 &
 #xrandr --output LVDS1 --mode 1366x768 --output DP3 --mode 1920x1080 --right-of LVDS1
 #xrandr --output HDMI2 --mode 1920x1080 --pos 1920x0 --rotate normal --output HDMI1 --primary --mode 1920x1080 --pos 0x0 --rotate normal --output VIRTUAL1 --off
 
 $HOME/.config/polybar/launch.sh &
 
 # Keyboard settings
-setxkbmap -layout us,sk
-setckbmap -option 'grp:alt_shift_toggle' &
+setxkbmap -layout us,sk &
+setxkbmap -option 'grp:alt_shift_toggle' &
 numlockx on &
 xset r rate 200 60 &
 
@@ -26,11 +26,11 @@ nitrogen --restore &
 
 xsetroot -cursor_name left_ptr &
 run sxhkd -c ~/.config/bspwm/sxhkd/sxhkdrc &
-
+run deadd-notification-center &
 run nm-applet &
 run pamac-tray &
 run xfce4-power-manager &
-
+run redshift &
 # Bluetooth settings
 #blueberry-tray &
 

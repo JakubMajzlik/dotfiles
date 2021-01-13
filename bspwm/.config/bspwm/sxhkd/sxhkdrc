@@ -6,6 +6,10 @@
 # SUPER + KEY
 #################################################################
 
+# All notifications
+super + n
+	kill -s USR1 $(pidof deadd-notification-center)
+
 # Terminal
 super + Return
 	alacritty
@@ -65,6 +69,10 @@ super + {1-9,0}
 #################################################################
 # SUPER + SHIFT KEYS
 #################################################################
+# Rofigen configs
+super + shift + c
+	rofigen ~/.config/rofigen/configlist
+
 
 #File-Manager
 super + shift + Return
@@ -144,11 +152,6 @@ super + alt + {Left,Down,Up,Right}
 #################################################################
 # SUPER + SHIFT  + ALT KEYS
 #################################################################
-
-# Move floating window
-super + alt + shift + {Left,Down,Up,Right}
-	~/.config/bspwm/scripts/move-window {west,south,north,east}
-
 #################################################################
 # ALT KEYS
 #################################################################
@@ -157,9 +160,9 @@ super + alt + shift + {Left,Down,Up,Right}
 alt + Tab
 	bspc desktop -f '^{1-9,10}'
 
-	#Focus selected desktop
-alt + shift + Tab
-	bspc desktop -f '^{1-9,10}'
+
+
+
 
 #Rotate desktop
 alt + space
@@ -198,11 +201,11 @@ XF86AudioStop
 
 #Brightness up
 XF86MonBrightnessUp
-	light -A 10
+	blight set +10%
 
 #Brightness down
 XF86MonBrightnessDown
-	light -U 10
+	blight set -10%
 
 #########################
 #        POLYBAR        #
