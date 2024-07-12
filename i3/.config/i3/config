@@ -25,6 +25,9 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 # and nm-applet is a desktop environment-independent system tray GUI for it.
 exec --no-startup-id nm-applet
 
+# Picom 
+exec --no-startup-id picom
+
 # $$\   $$\ $$$$$$$$\ $$\     $$\       $$$$$$$\  $$$$$$\ $$\   $$\ $$$$$$$\  $$$$$$\ $$\   $$\  $$$$$$\   $$$$$$\  
 # $$ | $$  |$$  _____|\$$\   $$  |      $$  __$$\ \_$$  _|$$$\  $$ |$$  __$$\ \_$$  _|$$$\  $$ |$$  __$$\ $$  __$$\ 
 # $$ |$$  / $$ |       \$$\ $$  /       $$ |  $$ |  $$ |  $$$$\ $$ |$$ |  $$ |  $$ |  $$$$\ $$ |$$ /  \__|$$ /  \__|
@@ -193,7 +196,8 @@ bindsym $mod+r mode "resize"
 #    | $$   | $$  | $$| $$$$$$$$| $$ \/  | $$| $$$$$$$$
 #    |__/   |__/  |__/|________/|__/     |__/|________/
                                                
-font pango:monospace 8
+font pango:MesloLGS Nerd Font 14
+#font pango:monospace 14
 
 #   /$$$$$$  /$$$$$$$$ /$$   /$$ /$$$$$$$$ /$$$$$$$ 
 #  /$$__  $$|__  $$__/| $$  | $$| $$_____/| $$__  $$
