@@ -28,6 +28,10 @@ exec --no-startup-id nm-applet
 # Picom 
 exec --no-startup-id picom
 
+# Polybar
+exec_always killall polybar
+exec_always --no-startup-id ~/.config/polybar/launch_polybar.sh
+
 # $$\   $$\ $$$$$$$$\ $$\     $$\       $$$$$$$\  $$$$$$\ $$\   $$\ $$$$$$$\  $$$$$$\ $$\   $$\  $$$$$$\   $$$$$$\  
 # $$ | $$  |$$  _____|\$$\   $$  |      $$  __$$\ \_$$  _|$$$\  $$ |$$  __$$\ \_$$  _|$$$\  $$ |$$  __$$\ $$  __$$\ 
 # $$ |$$  / $$ |       \$$\ $$  /       $$ |  $$ |  $$ |  $$$$\ $$ |$$ |  $$ |  $$ |  $$$$\ $$ |$$ /  \__|$$ /  \__|
