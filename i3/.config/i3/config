@@ -59,6 +59,10 @@ tiling_drag modifier titlebar
 # start a terminal
 bindsym $mod+Return exec alacritty 
 
+# rofi
+bindsym $mod+space exec rofi -show 
+
+
 # kill focused window
 bindsym $mod+Shift+q kill
 bindsym $mod+F2 exec firefox
@@ -112,7 +116,7 @@ bindsym $mod+e layout toggle split
 bindsym $mod+Shift+space floating toggle
 
 # change focus between tiling / floating windows
-bindsym $mod+space focus mode_toggle
+# bindsym $mod+space focus mode_toggle
 
 # focus the parent container
 bindsym $mod+a focus parent
