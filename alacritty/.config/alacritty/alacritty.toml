@@ -28,3 +28,6 @@ style = "Regular"
 opacity = 0.95
 decorations = "none"
 dynamic_padding = true
+
+[shell]
+program = "/bin/zsh"
