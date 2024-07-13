@@ -30,8 +30,8 @@ exec --no-startup-id picom
 
 # Polybar
 exec_always killall polybar
-exec_always --no-startup-id ~/.config/polybar/launch_polybar.sh
-
+exec_always --no-startup-id sh ~/.config/polybar/launch_polybar.sh
+# exec_always --no-startup-id polybar
 # $$\   $$\ $$$$$$$$\ $$\     $$\       $$$$$$$\  $$$$$$\ $$\   $$\ $$$$$$$\  $$$$$$\ $$\   $$\  $$$$$$\   $$$$$$\  
 # $$ | $$  |$$  _____|\$$\   $$  |      $$  __$$\ \_$$  _|$$$\  $$ |$$  __$$\ \_$$  _|$$$\  $$ |$$  __$$\ $$  __$$\ 
 # $$ |$$  / $$ |       \$$\ $$  /       $$ |  $$ |  $$ |  $$$$\ $$ |$$ |  $$ |  $$ |  $$$$\ $$ |$$ /  \__|$$ /  \__|
@@ -201,7 +201,11 @@ bindsym $mod+r mode "resize"
 #    |__/   |__/  |__/|________/|__/     |__/|________/
                                                
 font pango:MesloLGS Nerd Font 14
-#font pango:monospace 14
+
+#Removing window title bar
+for_window [class="^.*"] border pixel 0
+
+exec_always feh --bg-scale ~/.config/background1.jpg
 
 #   /$$$$$$  /$$$$$$$$ /$$   /$$ /$$$$$$$$ /$$$$$$$ 
 #  /$$__  $$|__  $$__/| $$  | $$| $$_____/| $$__  $$
