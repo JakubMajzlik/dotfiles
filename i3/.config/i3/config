@@ -213,7 +213,9 @@ for_window [class="^.*"] border pixel 0
 exec_always feh --bg-scale ~/.config/background1.jpg
 
 # Margins of windows
-gaps outer 20
+gaps outer 10
+gaps inner 20
+
 
 #   /$$$$$$  /$$$$$$$$ /$$   /$$ /$$$$$$$$ /$$$$$$$ 
 #  /$$__  $$|__  $$__/| $$  | $$| $$_____/| $$__  $$
