@@ -206,10 +206,14 @@ bindsym $mod+r mode "resize"
                                                
 font pango:MesloLGS Nerd Font 14
 
-#Removing window title bar
+# Removing window title bar
 for_window [class="^.*"] border pixel 0
 
+# Background
 exec_always feh --bg-scale ~/.config/background1.jpg
+
+# Margins of windows
+gaps outer 20
 
 #   /$$$$$$  /$$$$$$$$ /$$   /$$ /$$$$$$$$ /$$$$$$$ 
 #  /$$__  $$|__  $$__/| $$  | $$| $$_____/| $$__  $$
