@@ -19,9 +19,9 @@ function copyFolder() {
   cp -R "$sourceFolder" "$destinationFolder"
 
   if [ $? -eq 0 ]; then
-     echo "Folder $sourcefile copied successfully."
+     echo "Folder $sourceFolder copied successfully."
   else
-      echo "Failed $sourcefile to copy the folder."
+      echo "Failed $sourcefolder to copy the folder."
      exit 2
   fi
 }
