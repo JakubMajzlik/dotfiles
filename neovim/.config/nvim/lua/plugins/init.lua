@@ -15,14 +15,16 @@ return {
   require "configs.lspconfig"
   end,
   },
-  -- {
-  -- 	"williamboman/mason.nvim",
-  -- 	opts = {
-  -- 		ensure_installed = {
-  -- 			"lua-language-server", "stylua",
-  -- 			"html-lsp", "css-lsp" , "prettier"
-  -- 		},
-  -- 	},
+  {
+  "williamboman/mason.nvim",
+  opts = {
+  	ensure_installed = {
+  		"lua-language-server", "stylua",
+  		"html-lsp", "css-lsp" , "prettier",
+        "kotlin-lanugage-server"
+  	}
+  }
+  }
   -- },
   --
   -- {

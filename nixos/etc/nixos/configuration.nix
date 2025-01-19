@@ -91,6 +91,13 @@
     };
   };
 
+  #Aliases
+  environment.shellAliases = {
+    nixcfg = "sudo nvim /etc/nixos/configuration.nix";
+    i3cfg = "nvim ~/.config/i3/config";
+  };
+
+
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.jakub = {
     isNormalUser = true;
@@ -115,6 +122,9 @@
     pavucontrol
     gcc
     bat
+    nodejs
+    killall
+    unzip
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
@@ -147,7 +157,7 @@
        after = [ "sys-module-hid_apple.mount" "local-fs.target" ];
        serviceConfig = {
          ExecStart = [
-           "/bin/sh" "-c" "echo 2 > /sys/module/hid_apple/parameters/fnmode"
+           "/bin/sh" "-c" "echo" "2" ">" "/sys/module/hid_apple/parameters/fnmode"
          ];
          Type = "oneshot";
          RemainAfterExit = true;

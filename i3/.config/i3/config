@@ -29,7 +29,6 @@ exec --no-startup-id nm-applet
 exec --no-startup-id picom
 
 # Polybar
-exec_always killall polybar
 exec_always --no-startup-id sh ~/.config/polybar/launch_polybar.sh
 
 # $$\   $$\ $$$$$$$$\ $$\     $$\       $$$$$$$\  $$$$$$\ $$\   $$\ $$$$$$$\  $$$$$$\ $$\   $$\  $$$$$$\   $$$$$$\  
@@ -207,15 +206,18 @@ bindsym $mod+r mode "resize"
 font pango:MesloLGS Nerd Font 14
 
 # Removing window title bar
-for_window [class="^.*"] border pixel 0
+for_window [class="^.*"] border pixel 6 
 
 # Background
-exec_always feh --bg-scale ~/.local/share/backgrounds/background1.jpg
+exec_always feh --bg-scale ~/.local/share/backgrounds/background2.png
 
 # Margins of windows
 gaps outer 5
 gaps inner 15
 
+client.focused          #cba6f7 #cba6f7 #ffffff #cba6f7   #cba6f7
+client.focused_inactive #333333 #5f676a #ffffff #484e50   #5f676a
+client.unfocused        #333333 #222222 #888888 #292d2e   #222222
 
 #   /$$$$$$  /$$$$$$$$ /$$   /$$ /$$$$$$$$ /$$$$$$$ 
 #  /$$__  $$|__  $$__/| $$  | $$| $$_____/| $$__  $$
