@@ -1,12 +1,12 @@
 #!/bin/bash
-function copyFolder() {
+copyFolder() {
   local sourceFolder=$1
   local destinationFolder=$2
 
   # Check if the source fodler exists
   if [ ! -d "$sourceFolder" ]; then
-     echo "Source folder does not exist: $sourceFolder"
-     exit 1
+     echo "Source folder does not exist: $sourceFolder, skipping"
+     return
   fi
 
   # Check if the destination directory exists
@@ -26,14 +26,14 @@ function copyFolder() {
   fi
 }
 
-function copyFile() {
+copyFile() {
   local sourcefile=$1
   local destinationFolder=$2
 
   # Check if the source file exists
   if [ ! -f "$sourcefile" ]; then
-     echo "Source file does not exist: $sourcefile"
-     exit 1
+     echo "Source file does not exist: $sourcefile, skipping"
+     return
   fi
 
   # Check if the destination directory exists
